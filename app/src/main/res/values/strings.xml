@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pizza_mad</string>
+    <string-array name="districts">
+        <item>Colombo</item>
+        <item>Jaffna</item>
+        <item>Kandy</item>
+        <item>Galle</item>
+    </string-array>
+    <string-array name="cities">
+        <item>Kaduwla</item>
+        <item>Malabe</item>
+        <item>Koswatta</item>
+        <item>Battaramulla</item>
+        <item>Borella</item>
+        <item>Athurugiriya</item>
+    </string-array>
+</resources>
