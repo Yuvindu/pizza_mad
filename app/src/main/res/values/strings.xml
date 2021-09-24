@@ -14,4 +14,12 @@
         <item>Borella</item>
         <item>Athurugiriya</item>
     </string-array>
+    <string-array name="DishName">
+        <item>Chicken Pizza</item>
+        <item>Sausage Delight</item>
+        <item>Cheese Party</item>
+        <item>Butter Chicken Pizza</item>
+        <item>Black Chicken Pizza</item>
+        <item>Popcorn Chicken Pizza</item>
+    </string-array>
 </resources>
