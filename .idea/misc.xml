@@ -11,7 +11,7 @@
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/drawable/ic_camera_24.xml" value="0.1" />
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_chef_food_panel_bottom_navigation.xml" value="0.152" />
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_chef_forgot_password.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_chef_post_dish.xml" value="0.152" />
+        <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_chef_post_dish.xml" value="0.2" />
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_chef_registration.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_cheflogin.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/Yuvindu/AndroidStudioProjects/pizza_mad/app/src/main/res/layout/activity_choose_one.xml" value="0.25364583333333335" />
@@ -38,5 +38,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
   </component>
 </project>

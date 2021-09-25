@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chefFoodPanel.chef_postDish">
+    tools:context=".chefFoodPanel.chef_postDish"
+    android:background="@drawable/img4">
 
     <ImageButton
         android:id="@+id/image_upload"
@@ -54,7 +55,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:id="@+id/description"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear_layout"
@@ -62,13 +63,13 @@
         app:layout_constraintVertical_bias="0.053"
         app:layout_constraintHorizontal_bias="0.53">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textSize="18sp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,7 +77,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:id="@+id/Quantity"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
@@ -98,7 +99,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:id="@+id/price"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Quantity"
