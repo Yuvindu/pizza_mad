@@ -59,6 +59,7 @@ public class chef_postDish extends AppCompatActivity {
     FirebaseAuth Fauth;
     StorageReference ref;
     String ChefId , RandomUID , District, City , Area;
+    private Chef cheff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

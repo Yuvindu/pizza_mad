@@ -23,12 +23,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.hbb20.CountryCodePicker;
-import com.example.pizza_mad.ReusableCodeForAll;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ChefRegistration extends AppCompatActivity {
+
 
     String[] Colombo = {"Malabe","Borella","Kaduwela"};
     String[] Kandy = {"Pallekele","Galaha","Haton"};
@@ -44,29 +44,28 @@ public class ChefRegistration extends AppCompatActivity {
     String fname,lname,emailid,password,confpassword,mobile,house,Area,Pincode,districtt,cityy;
     String role="Chef";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_registration);
+        setContentView(R.layout.activity_registration);
 
-        //Hooks to all xml elements in activity_cher_registration
-        Fname = (TextInputLayout) findViewById(R.id.Firstname);
-        Lname = (TextInputLayout) findViewById(R.id.Lastname);
+        Fname = (TextInputLayout) findViewById(R.id.Fname);
+        Lname = (TextInputLayout) findViewById(R.id.Lname);
         Email = (TextInputLayout) findViewById(R.id.Emailid);
-        Pass = (TextInputLayout) findViewById(R.id.Pwd);
-        cpass = (TextInputLayout) findViewById(R.id.Cpass);
-        mobileno = (TextInputLayout) findViewById(R.id.Mobileno);
-        houseno = (TextInputLayout) findViewById(R.id.houseNo);
+        Pass = (TextInputLayout) findViewById(R.id.Password);
+        cpass = (TextInputLayout) findViewById(R.id.confirmpass);
+        mobileno = (TextInputLayout) findViewById(R.id.Mobilenumber);
+        houseno = (TextInputLayout) findViewById(R.id.localaddress);
         pincode = (TextInputLayout) findViewById(R.id.Pincode);
         Districtspin = (Spinner) findViewById(R.id.Districtt);
         Cityspin = (Spinner) findViewById(R.id.Cities);
         area = (TextInputLayout) findViewById(R.id.Area);
 
-        signup = (Button) findViewById(R.id.Signup);
+        signup = (Button) findViewById(R.id.button);
         Emaill = (Button) findViewById(R.id.email);
 
-
-        Cpp = (CountryCodePicker) findViewById(R.id.CountryCode);
+        Cpp = (CountryCodePicker) findViewById(R.id.countryCode);
 
         Districtspin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,13 +112,12 @@ public class ChefRegistration extends AppCompatActivity {
             }
         });
 
-        databaseReference = firebaseDatabase.getInstance().getReference("Chef");
+        databaseReference = firebaseDatabase.getInstance().getReference("Customer");
         FAuth = FirebaseAuth.getInstance();
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View view) {
 
                 fname = Fname.getEditText().getText().toString().trim();
                 lname = Lname.getEditText().getText().toString().trim();
@@ -161,7 +159,7 @@ public class ChefRegistration extends AppCompatActivity {
                                         hashMap1.put("Pincode", Pincode);
                                         hashMap1.put("District", districtt);
                                         hashMap1.put("Confirm Password", confpassword);
-                                        hashMap1.put("House", house);
+                                        hashMap1.put("Local Address", house);
 
 
                                         firebaseDatabase.getInstance().getReference("Chef")
@@ -204,15 +202,22 @@ public class ChefRegistration extends AppCompatActivity {
 
 
                                 });
+                            }else {
+                                mDialog.dismiss();
+                                ReusableCodeForAll.ShowAlert(ChefRegistration.this, "Error", task.getException().getMessage());
                             }
                         }
                     });
                 }
-
             }
         });
-
-
+        Emaill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ChefRegistration.this,Login.class));
+                finish();
+            }
+        });
 
     }
 
